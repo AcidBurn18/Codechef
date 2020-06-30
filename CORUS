@@ -1,0 +1,22 @@
+# cook your dish here
+t=int(input())
+while(t>0):
+    t-=1
+    m=[int(m) for m in input().split()]
+    s=input()
+    for i in range(m[1]):
+        iso=int(input())
+        ci=0
+        u=list(s)
+        te=list(s).copy()
+        for i in range(iso):
+            c=[]
+            for j in u:
+                if(j not in c):
+                    c.append(j)
+                    te.remove(j)
+                    
+            #r=set(u)-set(c)
+            u=te.copy()
+            ci+=len(c)
+        print(m[0]-ci)
